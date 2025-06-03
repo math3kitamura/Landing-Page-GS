@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/style.css">
-    <link rel="stylesheet" href="Assets/reset.css">
-    <title>FloodTech</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Assets/reset.css" />
+  <link rel="stylesheet" href="Assets/style.css" />
+  <title>FloodTech</title>
 </head>
 <body>
   <header>
@@ -27,24 +27,47 @@
         <div>
           <h2>O problema</h2>
           <p>As enchentes atingem milhares de pessoas todos os anos, invadindo casas, destruindo pertences e tornando o dia a dia inseguro.</p>
-          <p>Faltam avisos claros e acessíveis para que a população consiga se proteger antes que o problema aconteça. </p>
+          <p>Faltam avisos claros e acessíveis para que a população consiga se proteger antes que o problema aconteça.</p>
         </div>
-        <img src="Assets/image/cidade alagada.jpeg" alt="Cidade Alagada" id="Imagem cidade">
-        <img src="Assets/image/rua alagada.jpg" alt="Rua alagada" id="Imagem rua alagada">
-      </div>
+
+        <div class="slider">
+          <input type="radio" name="radio-btn" id="radio1" checked>
+          <input type="radio" name="radio-btn" id="radio2">
+
+          <div class="slides">
+            <div class="slide first">
+              <img src="Assets/image/cidade alagada.jpeg" alt="Cidade Alagada">
+            </div>
+            <div class="slide">
+              <img src="Assets/image/rua alagada.jpg" alt="Rua alagada">
+            </div>
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+          </div>
+
+          <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+          </div>
+        </div>
+
+      
     </section>
 
     <section id="tecnologias">
       <div class="content">
         <div>
           <h2>Tecnologias utilizadas</h2>
-          <p>Utilizamos sensores de nível de água conectados a um Arduino Uno, com buzzer, LEDs e bomba de drenagem automatizada.
+          <p>Utilizamos sensores de nível de água conectados a um Arduino Uno, com buzzer, LEDs e bomba de drenagem automatizada.</p>
           <p>O sistema reage em tempo real, não depende de internet e pode ser aplicado em vários tipos de locais.</p>
         </div>
-        <img src="Assets/image/luminária.webp" alt="LED que seria utilizado como aviso visual" id="LED">
-        <img src="Assets/image/bomba drenagem agua.avif" alt="Bomba de drenagem que poderia ser usada no projeto" id="Bomba">
-        <img src="Assets/image/sensor nível de agua.jpg" alt="Sensor de nível de água" id="Sensor">
-        <img src="Assets/image/alerta sonoro.webp" alt="Alerta sonoro" id="Alerta">
+        <img src="Assets/image/luminária.webp" alt="LED que seria utilizado como aviso visual" />
+        <img src="Assets/image/bomba drenagem agua.avif" alt="Bomba de drenagem que poderia ser usada no projeto" />
+        <img src="Assets/image/sensor nível de agua.jpg" alt="Sensor de nível de água" />
+        <img src="Assets/image/alerta sonoro.webp" alt="Alerta sonoro" />
       </div>
     </section>
 
@@ -55,8 +78,8 @@
           <p>A empresa desenvolve dispositivos tecnológicos inteligentes para prevenir enchentes, integrando sensores e sistemas de drenagem automatizados para amenizar alagamentos.</p>
           <p>O objetivo é utilizar IoT para monitoramento e intervenção em tempo real, garantindo segurança, proteção ambiental e melhor infraestrutura urbana.</p>
         </div>
-        <img src="Assets/image/rua alagada em bairro nobre.webp" alt="Rua alagada em área nobre São Paulo">
-        <img src="Assets/image/foto de rua com forte chuva.avif" alt="Rua no Japão sem alagamento mesmo com chuva forte">
+        <img src="Assets/image/rua alagada em bairro nobre.webp" alt="Rua alagada em área nobre São Paulo" />
+        <img src="Assets/image/foto de rua com forte chuva.avif" alt="Rua no Japão sem alagamento mesmo com chuva forte" />
       </div>
     </section>
 
@@ -67,18 +90,18 @@
           <p>Moradores, comerciantes, escolas e também motoristas e pedestres que circulam pelas ruas monitoradas serão diretamente beneficiados.</p>
           <p>Autoridades locais e profissionais que atuam na prevenção de desastres naturais também se beneficiarão.</p>
         </div>
-         <img src="Assets/image/pessoa em rua alagada.jpg" alt="Mulher sofrendo após enchente">
+        <img src="Assets/image/pessoa em rua alagada.jpg" alt="Mulher sofrendo após enchente" />
       </div>
     </section>
 
     <section id="beneficios">
-      <div class="content"> 
+      <div class="content">
         <div>
           <h2>Benefícios</h2>
           <p>A implementação de dispositivos inteligentes reduz significativamente o risco de enchentes, prevenindo danos materiais, perdas econômicas e impactos à saúde pública.</p>
-          <p>Além disso, a solução melhora a infraestrutura urbana, promovendo cidades mais adaptaveis, sustentáveis e seguras, com menor custo de manutenção a longo prazo.</p>
+          <p>Além disso, a solução melhora a infraestrutura urbana, promovendo cidades mais adaptáveis, sustentáveis e seguras, com menor custo de manutenção a longo prazo.</p>
         </div>
-        <img src="Assets/image/foto ciclista.png" alt="Ciclista andando em uma área livre de alagamentos">
+        <img src="Assets/image/foto ciclista.png" alt="Ciclista andando em uma área livre de alagamentos" />
       </div>
     </section>
 
@@ -89,15 +112,15 @@
           <p>Com alertas visuais e sonoros, os usuários conseguem agir com antecedência, protegendo seus bens e evitando situações de risco.</p>
           <p>Facilita o planejamento de emergências e manutenção de drenagem urbana.</p>
         </div>
-        <img src="Assets/image/mulher conferindo a previsão do tempo.jpg" alt="Pessoa conferindo a previsão do tempo">
+        <img src="Assets/image/mulher conferindo a previsão do tempo.jpg" alt="Pessoa conferindo a previsão do tempo" />
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 FLoodTech - Prevenção de Alagamentos. Todos os direitos reservados.</p>
+    <p>&copy; 2025 FloodTech - Prevenção de Alagamentos. Todos os direitos reservados.</p>
   </footer>
 
-<script src="Assets/script.js"></script>
+  <script src="Assets/script.js"></script>
 </body>
 </html>
