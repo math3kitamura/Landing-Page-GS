@@ -326,3 +326,45 @@ section {
 .cor-de-fundo:hover {
   transform: scale(1.2);
 }
+
+.nav-menu{
+  position: relative;
+}
+
+.hamburguer-button .icon {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
+
+.hamburguer-button[aria-expanded="false"] .icon::before {
+  content: "\2630"; 
+}
+
+.hamburguer-button[aria-expanded="true"] .icon::before {
+  content: "\2715"; 
+}
+
+.hamburguer-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .hamburguer-button {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
