@@ -266,10 +266,19 @@ section {
   margin-top: 14px;
 }
 
-.form-content.error input{
-  border-color: rgb(214, 85, 85);
+.form-content span.error-message {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  font-size: 14px;
+  visibility: hidden;
 }
 
-.form-content.error a{
+.form-content.error span.error-message {
   color: rgb(214, 85, 85);
+  visibility: visible;
+}
+
+.form-content.error input {
+  border-color: rgb(214, 85, 85);
 }
