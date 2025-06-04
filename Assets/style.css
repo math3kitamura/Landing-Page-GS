@@ -1,6 +1,6 @@
 :root {
   --cor-primaria: #00cfd0;
-  --cor-secundaria: #00ffff;
+  --cor-secundaria: #48dada;
   --cor-destaque: #4a879b;
   --cor-fundo: #f9f9f9;
   --cor-texto: #333;
@@ -248,7 +248,8 @@ section {
 }
 
 .header{
-  background: linear-gradient(360deg, var(--cor-primaria) 20%, var(--cor-destaque) 100%);
+  /* background: linear-gradient(360deg, var(--cor-primaria) 20%, var(--cor-destaque) 100%); */
+  background-color: var(--cor-primaria);
   padding: 17px;
   text-align: center;
 }
