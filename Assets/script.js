@@ -101,3 +101,24 @@ function clearForm() {
 function mudarCor(cor) {
   document.body.style.backgroundColor = cor;
 }
+
+const btnMenu = document.getElementById("hamburger-button");
+const menu = document.getElementById("cabeçalho")
+
+btnMenu.classList.add("hamburguer-button-js-enabled");
+btnMenu.setAttribute("aria-expanded", "false")
+menu.setAttribute("aria-hidden", "true")
+
+btnMenu.addEventListener("click", function(){
+
+    let expanded = this.getAttribute("aria-expanded") === "true" ? true : false
+    
+    if (expanded){
+        menu.classList.add("cabeçalho-closed")
+    } else{
+        menu.classList.remove("cabeçalho-closed")
+    }
+
+    this.setAttribute("aria-expanded", !expanded)
+    menu.setAttribute("aria-hidden", expanded)
+})
