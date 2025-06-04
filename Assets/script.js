@@ -12,7 +12,7 @@ function nextImage(){
 
 setInterval( function(){
     nextImage();
-}, 2500)
+}, 3000)
 
 let tecCount = 1;
 document.getElementById("tec1").checked = true;
@@ -27,7 +27,7 @@ function nextImage2(){
 
 setInterval(function(){
     nextImage2();
-}, 2500);
+}, 3000);
 
 const form = document.getElementById('form');
 const local = document.getElementById('local');
@@ -98,3 +98,6 @@ function clearForm() {
     data.value = "";
 }
 
+function mudarCor(cor) {
+  document.body.style.backgroundColor = cor;
+}

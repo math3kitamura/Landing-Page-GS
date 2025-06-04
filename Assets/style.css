@@ -315,3 +315,15 @@ section {
 .form-content.error input {
   border-color: rgb(214, 85, 85);
 }
+
+.cor-de-fundo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+}
+.cor-de-fundo:hover {
+  transform: scale(1.2);
+}
+  
