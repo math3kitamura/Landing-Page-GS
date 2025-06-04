@@ -70,9 +70,24 @@ function checkForm(){
 
     const isValid = [...formItems].every( (item) => {
         return item.className === "form-content"
-    })
+    })  
 
     if (isValid){
         alert("Registro confirmado!")
-    } 
+        clearForm()
+    }
+}
+
+function clearForm() {
+    local.value = "";
+    data.value = "";
+
+    const formItems = form.querySelectorAll(".form-content");
+    formItems.forEach((item) => {
+        item.classList = "form-content";
+        const errorSpan = item.querySelector(".error-message");
+        if (errorSpan) {
+            errorSpan.style.visibility = "hidden";
+        }
+    });
 }
