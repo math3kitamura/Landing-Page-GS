@@ -199,3 +199,77 @@ footer {
 section {
   scroll-margin-top: 100px; /* altura do cabeçalho ou algo similar */
 }
+
+.container{
+  background-color: var(--cor-secundaria);
+  border-radius: 8px;
+  margin: 14px;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: 0 3px 5px rgba(0,0,0, 0.5);
+  overflow: hidden;
+}
+
+.header h2{
+  text-align: center;
+  color: var(--cor-fundo) 
+}
+
+.header{
+  background: linear-gradient(360deg, var(--cor-primaria) 20%, var(--cor-destaque) 100%);
+  padding: 17px;
+  text-align: center;
+}
+
+.form{
+  padding: 15px;
+}
+
+.form-content{
+  margin-bottom: 8px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.form-content label{
+  display: inline-block;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.form-content input{
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid #fff;
+}
+
+.form-content a{
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.form button{
+  background-color: var(--cor-destaque);
+  color: #fff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.form-content.error input{
+  border-color: rgb(214, 85, 85);
+}
+
+.form-content.error a{
+  color: rgb(214, 85, 85);
+}
