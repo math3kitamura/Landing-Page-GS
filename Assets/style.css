@@ -51,7 +51,6 @@ input[type="radio"] {
   display: none;
 }
 
-/* Movimento dos slides */
 #radio1:checked ~ .slides {
   transform: translateX(0%);
 }
@@ -60,11 +59,10 @@ input[type="radio"] {
   transform: translateX(-100%);
 }
 
-/* Navegação manual */
 .manual-navigation,
 .navigation-auto {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -76,7 +74,7 @@ input[type="radio"] {
 .navigation-auto div {
   width: 12px;
   height: 12px;
-  border: 2px solid #fff;
+  border: 2px solid var(--cor-primaria);
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s;
@@ -85,15 +83,49 @@ input[type="radio"] {
 
 .manual-btn:hover,
 .navigation-auto div:hover {
-  background: #fff;
+  background: var(--cor-link-hover);
 }
 
-/* Estado ativo visual para auto navigation */
 #radio1:checked ~ .navigation-auto .auto-btn1 {
   background-color: var(--cor-destaque);
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: var(--cor-destaque);
+}
+
+.slides.tecnologias {
+  display: flex;
+  width: 400%; /* 4 slides para tecnologias */
+  transition: transform 0.5s ease-in-out;
+}
+
+#tec1:checked ~ .slides {
+  transform: translateX(0%);
+}
+#tec2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+#tec3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+#tec4:checked ~ .slides {
+  transform: translateX(-300%);
+}
+
+#tec1:checked ~ .navigation-auto .auto-btn3 {
+  background-color: var(--cor-destaque);
+}
+
+#tec2:checked ~ .navigation-auto .auto-btn4 {
+  background-color: var(--cor-destaque);
+}
+
+#tec3:checked ~ .navigation-auto .auto-btn5 {
+  background-color: var(--cor-destaque);
+}
+
+#tec4:checked ~ .navigation-auto .auto-btn6 {
   background-color: var(--cor-destaque);
 }
 

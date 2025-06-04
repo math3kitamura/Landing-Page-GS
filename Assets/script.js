@@ -82,3 +82,18 @@ function clearForm() {
     local.value = "";
     data.value = "";
 }
+
+let tecCount = 1;
+document.getElementById("tec1").checked = true;
+
+function nextImage2(){
+    tecCount++;
+    if(tecCount > 4){
+        tecCount = 1;
+    }
+    document.getElementById("tec" + tecCount).checked = true;
+}
+
+setInterval(function(){
+    nextImage2();
+}, 2500);
