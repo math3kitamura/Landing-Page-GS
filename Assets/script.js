@@ -22,6 +22,7 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     
     checkInputLocal()
+    checkInputData();
 })
 
 function checkInputLocal(){
@@ -31,6 +32,17 @@ function checkInputLocal(){
         errorInput(local, "Você precisa preencher este campo")
     } else{
         const formItem = local.parentElement;
+        formItem.classList = "form-content"
+    }
+}
+
+function checkInputData(){
+    const dataValue = data.value;
+
+    if(dataValue === ""){
+        errorInput(data, "Você precisa preencher este campo")
+    } else{
+        const formItem = data.parentElement;
         formItem.classList = "form-content"
     }
 }
