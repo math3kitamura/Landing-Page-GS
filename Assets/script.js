@@ -21,8 +21,15 @@ const data = document.getElementById('data');
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     
+    checkForm();
+})
+
+local.addEventListener("blur", () =>{
     checkInputLocal()
-    checkInputData();
+})
+
+data.addEventListener("blur", () =>{
+    checkInputData()
 })
 
 function checkInputLocal(){
@@ -53,4 +60,19 @@ function errorInput(input, message) {
 
     textMessage.innerText = message;
     formItem.className = "form-content error";
+}
+
+function checkForm(){
+    checkInputLocal();
+    checkInputData();
+
+    const formItems = form.querySelectorAll(".form-content")
+
+    const isValid = [...formItems].every( (item) => {
+        return item.className === "form-content"
+    })
+
+    if (isValid){
+        alert("Registro confirmado!")
+    } 
 }
