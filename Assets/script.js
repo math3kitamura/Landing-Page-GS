@@ -14,6 +14,21 @@ setInterval( function(){
     nextImage();
 }, 2500)
 
+let tecCount = 1;
+document.getElementById("tec1").checked = true;
+
+function nextImage2(){
+    tecCount++;
+    if(tecCount > 4){
+        tecCount = 1;
+    }
+    document.getElementById("tec" + tecCount).checked = true;
+}
+
+setInterval(function(){
+    nextImage2();
+}, 2500);
+
 const form = document.getElementById('form');
 const local = document.getElementById('local');
 const data = document.getElementById('data');
@@ -83,17 +98,3 @@ function clearForm() {
     data.value = "";
 }
 
-let tecCount = 1;
-document.getElementById("tec1").checked = true;
-
-function nextImage2(){
-    tecCount++;
-    if(tecCount > 4){
-        tecCount = 1;
-    }
-    document.getElementById("tec" + tecCount).checked = true;
-}
-
-setInterval(function(){
-    nextImage2();
-}, 2500);
