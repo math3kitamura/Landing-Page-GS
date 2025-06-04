@@ -81,13 +81,4 @@ function checkForm(){
 function clearForm() {
     local.value = "";
     data.value = "";
-
-    const formItems = form.querySelectorAll(".form-content");
-    formItems.forEach((item) => {
-        item.classList = "form-content";
-        const errorSpan = item.querySelector(".error-message");
-        if (errorSpan) {
-            errorSpan.style.visibility = "hidden";
-        }
-    });
 }
