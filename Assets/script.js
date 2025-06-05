@@ -155,3 +155,32 @@ function handleMediaQueryChange(e){
 
 mediaQuery.addEventListener("change", handleMediaQueryChange)
 handleMediaQueryChange(mediaQuery)
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+  const totalQuestions = 10;
+  let score = 0;
+
+  for (let i = 1; i <= totalQuestions; i++) {
+    const options = document.getElementsByName('q' + i);
+    for (const option of options) {
+      if (option.checked && option.value === '1') {
+        score++;
+      }
+    }
+  }
+
+  const percentage = (score / totalQuestions) * 100;
+  let message = `Você acertou ${score} de ${totalQuestions} perguntas (${percentage.toFixed(0)}%). `;
+
+  if (percentage === 100) {
+    message += "Parabéns! Você conhece muito bem os cuidados com enchentes.";
+  } else if (percentage >= 70) {
+    message += "Muito bom! Continue se informando e tomando cuidado.";
+  } else if (percentage >= 40) {
+    message += "Legal, mas é importante estudar mais sobre segurança em enchentes.";
+  } else {
+    message += "Infelizmente sua pesquiza não foi satisfatoria.";
+  }
+
+  document.getElementById('result').textContent = message;
+});
