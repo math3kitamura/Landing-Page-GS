@@ -469,3 +469,22 @@ input[type="radio"] {
   color: var(--cor-link);
   text-shadow: 1px 1px 2px #90e0ef;
 }
+
+#restartQuizBtn {
+  background-color: var(--cor-destaque);
+  color: #fff;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 8px 16px rgba(0, 119, 182, 0.3);
+}
+
+#restartQuizBtn:hover {
+  background-color: var(--cor-link-hover);
+  transform: translateY(-2px);
+}

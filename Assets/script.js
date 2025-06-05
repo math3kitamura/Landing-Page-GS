@@ -184,3 +184,18 @@ document.getElementById('submitBtn').addEventListener('click', function() {
 
   document.getElementById('result').textContent = message;
 });
+
+document.getElementById('restartQuizBtn').addEventListener('click', function() {
+  const totalQuestions = 10;
+
+  for (let i = 1; i <= totalQuestions; i++) {
+    const options = document.getElementsByName('q' + i);
+    options.forEach(option => {
+      option.checked = false;
+    });
+  }
+
+  document.getElementById('result').textContent = "";
+
+  document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+});
