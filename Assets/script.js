@@ -102,17 +102,25 @@ function mudarCor(cor) {
   document.body.style.backgroundColor = cor;
 }
 
-const btnMenu = document.getElementById("hamburger-button");
+const btnMenu = document.getElementById("hamburguer-button");
 const menu = document.getElementById("cabeçalho")
 
 btnMenu.classList.add("hamburguer-button-js-enabled");
-btnMenu.setAttribute("aria-expanded", "false")
-menu.setAttribute("aria-hidden", "true")
+
+function closeMenu() {
+    btnMenu.setAttribute("aria-expanded", "false")
+    menu.setAttribute("aria-hidden", "true")
+    menu.classList.add("cabeçalho-closed")
+}
+
+closeMenu()
 
 btnMenu.addEventListener("click", function(){
 
     let expanded = this.getAttribute("aria-expanded") === "true" ? true : false
     
+    document.removeEventListener("click", closeMenu)
+
     if (expanded){
         menu.classList.add("cabeçalho-closed")
     } else{
@@ -121,4 +129,29 @@ btnMenu.addEventListener("click", function(){
 
     this.setAttribute("aria-expanded", !expanded)
     menu.setAttribute("aria-hidden", expanded)
+
+    setTimeout(function(){
+        if (!expanded){
+        document.addEventListener("click", closeMenu)
+    }
+    }, 1)    
+    
 })
+
+const mediaQuery = window.matchMedia("(min-width: 768px)")
+
+function handleMediaQueryChange(e){
+
+    if (e.matches){
+        menu.setAttribute("aria-hidden", "false")
+        btnMenu.setAttribute("aria-expanded", "true")
+        menu.classList.remove("cabeçalho-closed")
+    } else {
+        menu.setAttribute("aria-hidden", "true")
+        btnMenu.setAttribute("aria-expanded", "false")
+        menu.classList.add("cabeçalho-closed")
+    }
+}
+
+mediaQuery.addEventListener("change", handleMediaQueryChange)
+handleMediaQueryChange(mediaQuery)

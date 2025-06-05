@@ -345,8 +345,12 @@ section {
   content: "\2715"; 
 }
 
+.hamburguer-button-js-enabled+.cabeçalho-closed{
+  display: none;
+} 
+
 .hamburguer-button {
-  /* display: none; */
+  display: none;
   background: none;
   border: none;
   color: white;
@@ -355,12 +359,17 @@ section {
   cursor: pointer;
 }
 
+.hamburguer-button-js-enabled{
+  display: block;
+}
+
 @media (min-width: 768px) {
   .hamburguer-button {
     display: none;
   }
 
-  .menu {
+  .hamburguer-button-js-enabled + .menu {
+    position: static;
     display: flex;
     flex-direction: row;
     width: auto;
